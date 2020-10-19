@@ -1,0 +1,14 @@
+<html>
+<body>
+    <p>Below, you can see a table that is generated in HTML using a Python for-loop, in combination with Jinja delimiters.<br>
+    From the Python file, the dictionary is passed into here.</p>
+    <table border = 1>
+         {% for key, value in dict.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+</body>
+</html>

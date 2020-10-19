@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <body>
+       <p>On this page, you will be able to see the effects of passing Python variables (similar to "name" in the previous template) and using the {% raw %}{%%}{% endraw %} statements delimiters to perform if-statements on this variable inside the template.</p>
+
+       <h2>The number is {{number}}.</h2>
+
+          {% if number > 50 %}
+             <h2> Your number is above 50.</h2>
+          {% else %}
+             <h2>Your number is below 50.</h2>
+          {% endif %}
+        <p>This is the result of a conditional.</p>
+
+
+   </body>
+</html>

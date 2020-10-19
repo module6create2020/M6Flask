@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISS tracker</title>
+</head>
+<body>
+    <h1>Using APIs</h1>
+    <p>This webpage shows how to make use of a couple of APIs. The website <a href="http://api.open-notify.org/">http://api.open-notify.org/</a>
+    has two available APIs: one for the location of the International Space Station (ISS), and a live conuter
+    of the amount of people currently in space. Probably useful for... something.
+
+    With the Python <code>requests</code> library, you can retreive the coordinates on Earth above which the ISS is currently positioned.
+    With the OpenCage API, you can input these coordinates to achieve all kinds of data, like the city, country, sunrise and sunset time,
+    the name of the body of water if its not above land, et cetera. Using the <code>pprint</code> module, you can make JSON
+        data appear nicely formatted in the Python console.
+    </p>
+
+    Using the ISS API, the following JSON formatted response:
+
+    <pre><code>{{iss_data}}</code></pre>
+
+    <p>The International Space Stations is currently at the following coordinates:
+    {{lat}}, {{lon}} (Retrieved at <span class="output"></span> UTC).</p>
+
+    According the OpenCage API, the ISS is now directly above {{location}}.
+
+    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+		<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+    <script>(function () {
+        var setting = {"height":531,"width":803,"zoom":1,"queryString":"{{lat}},{{lon}}","satellite":true,"centerCoord":[{{lat}},{{lon}}],"lang":"en","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"283245"};
+        var d = document;
+        var s = d.createElement('script');
+        s.src = 'https://1map.com/js/script-for-user.js?embed_id=283245';
+        s.async = true;
+        s.onload = function (e) {
+          window.OneMap.initMap(setting)
+        };
+        var to = d.getElementsByTagName('script')[0];
+        to.parentNode.insertBefore(s, to);
+      })();
+    </script>
+    <a href="https://1map.com/nl/map-embed">1 Map</a></div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='timestamp.js') }}"></script>
+</body>
+</html>
