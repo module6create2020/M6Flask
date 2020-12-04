@@ -42,7 +42,6 @@ text_demo_int = '''
                     You get the idea...
                     </li>
                 </ul>
-                <p>You can also try this with a floating point numbers!
                 <br>
                 Finally, if you look into the source code, you can see that two decorators are attached
                 <br> to the same function. This is called overloading.</p>
@@ -63,22 +62,17 @@ def demo_int(number):
 
 @app.route('/login/guest/<username>/')
 def user_page(username):
-    print("5")
     return "You just got forwarded here, <b>{}</b>, because your not an admin.".format(username)
 
 @app.route('/login/admin/')
 def admin_page():
-    print("4")
     return "Hello, admin!"
 
 @app.route('/login/<name>/')
 def login(name):
-    print("1")
     if name == 'admin':
-        print("2")
         return redirect(url_for('admin_page'))
     else:
-        print("3")
         return redirect(url_for('user_page', username=name))
 
 if __name__ == '__main__':

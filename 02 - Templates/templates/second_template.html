@@ -2,10 +2,11 @@
 <html>
     <body>
     <h1>Hello {{name}}!</h1>
-    <p>This is a dynamically generated webpage. You can see that your name was
+    <p>This is a dynamically generated webpage. Your name can see that your name was
         put into the file. Now we're getting somewhere. This can be linked to Python variables!<br>
-        These variables are inserted using the Jinja2 template engine. The characters {{}} are used to
-        insert expressions (and thus variables). {##} are used for comments, # for line statements, and {%%} for statements
+        These variables are inserted using the Jinja2 template engine. The characters {% raw %} {{}} {% endraw%} are used to
+        insert expressions (and thus variables).<br>
+        {% raw %} {##} {% endraw %} are used for comments, {% raw %} # {% endraw %} for line statements, and {% raw %} {%%} {% endraw%} for statements
         i.e. assignments (a = 1, b = test(), etc.) That means you can use code INSIDE a webpage template!
     </p>
     </body>

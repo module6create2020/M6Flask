@@ -25,23 +25,6 @@
 
     According the OpenCage API, the ISS is now directly above {{location}}.
 
-    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-		<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
-    <script>(function () {
-        var setting = {"height":531,"width":803,"zoom":1,"queryString":"{{lat}},{{lon}}","satellite":true,"centerCoord":[{{lat}},{{lon}}],"lang":"en","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"283245"};
-        var d = document;
-        var s = d.createElement('script');
-        s.src = 'https://1map.com/js/script-for-user.js?embed_id=283245';
-        s.async = true;
-        s.onload = function (e) {
-          window.OneMap.initMap(setting)
-        };
-        var to = d.getElementsByTagName('script')[0];
-        to.parentNode.insertBefore(s, to);
-      })();
-    </script>
-    <a href="https://1map.com/nl/map-embed">1 Map</a></div>
-
     <script type="text/javascript" src="{{ url_for('static', filename='timestamp.js') }}"></script>
 </body>
 </html>

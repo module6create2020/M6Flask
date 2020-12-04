@@ -1,0 +1,12 @@
+<!-- index.html -->
+<html>
+  <head>
+    <title>Online Plots Demonstration</title>
+  </head>
+  <body>
+    <h1>Online Plots Demonstration</h1>
+    {% for plot in plots %}
+        <img id="bg" src="{{ plot }}">
+    {% endfor %}
+  </body>
+</html>

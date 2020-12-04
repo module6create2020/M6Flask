@@ -7,11 +7,11 @@ face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
 ds_factor = 0.6
 
 class VideoCamera(object):
-    def __init__(self, weight, height):
+    def __init__(self, width, height):
         # capturing video
         self.video = cv2.VideoCapture(0)
-        self.video.set(3, int(weight))
-        self.video.set(4, int(height))
+        self.video.set(3, int(width)) # Set width
+        self.video.set(4, int(height)) # Set height
 
     def __del__(self):
         # releasing camera

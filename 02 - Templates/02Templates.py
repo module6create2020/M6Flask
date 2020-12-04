@@ -16,13 +16,22 @@ def hardcoded_index():
 def first_template():
     return render_template('first_template.html')
 
+@app.route('/second_template/')
+def second_template_no_name():
+    return "No dummy, go to /second_template/some_name"
+
 # To make use of the variables, let's use the second template:
 @app.route('/second_template/<name>')
 def second_template(name):
     return render_template('second_template.html', name=name)
 
+@app.route('/third_template/')
+def third_template_no_number():
+    return "Enter a number after /third_template/"
+
 # You can also use conditionals and other python code inside the template.
 @app.route('/third_template/<int:number>')
+@app.route('/third_template/<float:number>')
 def third_template(number):
     return render_template('third_template.html', number=number)
 
