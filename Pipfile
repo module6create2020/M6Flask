@@ -9,6 +9,8 @@ requests = "*"
 opencage = "*"
 numpy = "*"
 gunicorn = "*"
+opencv-contrib-python = "*"
+matplotlib = "*"
 
 [dev-packages]
 

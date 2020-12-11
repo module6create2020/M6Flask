@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for, request, render_template
-import requests  # needs to be installed through pip.
+import requests
 import json
-from opencage.geocoder import OpenCageGeocode # Pip install opencage, used for geodecoding of ISS coordinates.
+from opencage.geocoder import OpenCageGeocode # Used for geodecoding of ISS coordinates.
 app = Flask(__name__)
 from pprint import pprint
 
